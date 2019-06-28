@@ -28,6 +28,11 @@ namespace Backend.WebApp.Migrations
                     b.Property<DateTimeOffset>("Created");
 
                     b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasMaxLength(64);
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasMaxLength(64);
 
                     b.Property<DateTimeOffset?>("Modified");
